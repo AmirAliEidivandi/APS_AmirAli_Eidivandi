@@ -1,3 +1,65 @@
+const checkBox = document.querySelector("#hide input");
+const heading = document.querySelectorAll(".title")[1];
+const ul = document.querySelector("ul");
+const inputText = document.querySelector("#add-book input");
+const addBtn = document.querySelector(".button");
+
+const spanDelete = `<span class="delete">حذف</span>`;
+
+addBtn.addEventListener("click", (e) => {
+    const li = document.createElement("li");
+    const spanName = document.createElement("span");
+
+    spanName.className = "name";
+    spanName.textContent = inputText.value;
+
+    li.appendChild(spanName);
+    li.innerHTML += spanDelete;
+
+    ul.appendChild(li);
+
+    inputText.value = "";
+    e.preventDefault();
+});
+
+checkBox.addEventListener("click", () => {
+    if (checkBox.checked) {
+        heading.style.display = "none";
+        ul.style.display = "none";
+    } else {
+        heading.style.display = "block";
+        ul.style.display = "block";
+    }
+});
+
+
+
+const arr = ['amirali', 'ali', 'ahmad', 'hossein', 'mohammad']
+
+localStorage.setItem('array', arr)
+
+const myArr = localStorage.getItem('array').split(',')
+console.log(myArr);
+
+const obj = {
+    name: 'amirali',
+    age: 20,
+    family: 'eidivandi'
+}
+
+localStorage.setItem('myObj', JSON.stringify(obj))
+const myObj = JSON.parse(localStorage.getItem("myObj"));
+console.log(myObj);
+
+
+
+// localStorage.setItem('amirali', 'eidivandi')
+// localStorage.setItem('amirali2', 'eidivandi2')
+// localStorage.setItem('amirali3', 'eidivandi3')
+
+// localStorage.removeItem('amirali', 'eidivandi')
+
+
 
 // const link = document.querySelector(".button");
 // link.addEventListener('click', (e) => {
@@ -23,8 +85,6 @@
 // })
 // console.log(heading);
 
-
-
 // const newHeading = document.querySelector('h2')
 
 // newHeading.className = 'title'
@@ -43,9 +103,7 @@
 // // li.remove()
 // // console.log(li);
 
-
 // console.log(oldHeading);
-
 
 // let result;
 
@@ -72,7 +130,6 @@
 // container.appendChild(heading);
 // console.log(container);
 // console.log(heading);
-
 
 // const inputText = document.querySelector('#add-book input')
 // const addBtn = document.querySelector('.button')
