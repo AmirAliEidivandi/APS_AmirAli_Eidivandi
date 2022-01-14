@@ -18,9 +18,45 @@ addBtn.addEventListener("click", (e) => {
 
     ul.appendChild(li);
 
+    storeToLocalStorage(inputText.value);
+
     inputText.value = "";
-    e.preventDefault();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    let tasks;
+    if (localStorage.getItem("tasks") === null) {
+        tasks = [];
+    } else {
+        tasks = localStorage.getItem("tasks").split(",");
+    }
+
+    for (let item of tasks) {
+        const li = document.createElement("li");
+        const spanName = document.createElement("span");
+
+        spanName.className = "name";
+        spanName.textContent = item;
+
+        li.appendChild(spanName);
+        li.innerHTML += spanDelete;
+
+        ul.appendChild(li);
+    }
+});
+
+function storeToLocalStorage(task) {
+    let tasks;
+    if (localStorage.getItem("tasks") === null) {
+        tasks = [];
+    } else {
+        tasks = localStorage.getItem("tasks").split(",");
+    }
+
+    tasks.push(task);
+
+    localStorage.setItem("tasks", tasks);
+}
 
 checkBox.addEventListener("click", () => {
     if (checkBox.checked) {
@@ -32,34 +68,28 @@ checkBox.addEventListener("click", () => {
     }
 });
 
+// const arr = ['amirali', 'ali', 'ahmad', 'hossein', 'mohammad']
 
+// localStorage.setItem('array', arr)
 
-const arr = ['amirali', 'ali', 'ahmad', 'hossein', 'mohammad']
+// const myArr = localStorage.getItem('array').split(',')
+// console.log(myArr);
 
-localStorage.setItem('array', arr)
+// const obj = {
+//     name: 'amirali',
+//     age: 20,
+//     family: 'eidivandi'
+// }
 
-const myArr = localStorage.getItem('array').split(',')
-console.log(myArr);
-
-const obj = {
-    name: 'amirali',
-    age: 20,
-    family: 'eidivandi'
-}
-
-localStorage.setItem('myObj', JSON.stringify(obj))
-const myObj = JSON.parse(localStorage.getItem("myObj"));
-console.log(myObj);
-
-
+// localStorage.setItem('myObj', JSON.stringify(obj))
+// const myObj = JSON.parse(localStorage.getItem("myObj"));
+// console.log(myObj);
 
 // localStorage.setItem('amirali', 'eidivandi')
 // localStorage.setItem('amirali2', 'eidivandi2')
 // localStorage.setItem('amirali3', 'eidivandi3')
 
 // localStorage.removeItem('amirali', 'eidivandi')
-
-
 
 // const link = document.querySelector(".button");
 // link.addEventListener('click', (e) => {
