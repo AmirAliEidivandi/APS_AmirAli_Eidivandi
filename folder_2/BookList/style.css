@@ -1,8 +1,12 @@
 body {
-    font-family: Tahoma;
+    font-family: IRANYekan;
     color: #444;
     letter-spacing: 1px;
     user-select: none;
+}
+
+input {
+    font-family: IRANYekan;
 }
 
 #book-list h1 {
