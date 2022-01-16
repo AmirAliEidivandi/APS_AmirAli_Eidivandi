@@ -9,5 +9,5 @@ console.log(isEqualTo100(0, 100)); // true
 console.log(isEqualTo100(10, 0)); // false
 console.log(isEqualTo100(10, 100)); // true
 
-console.log(isEqualTo100(50, 50)); // true
-console.log(isEqualTo100(10, 40)); // false
+console.log(isEqualTo100(50, 50)); // true 
+console.log(isEqualTo100(10, 40)); // false 

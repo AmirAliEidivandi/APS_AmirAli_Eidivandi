@@ -1,5 +1,6 @@
 // write a program to get the extension of a fileName.
 
+
 const getExtension = (str) => str.slice(str.lastIndexOf('.'))
 
 console.log(getExtension('index.html'));
