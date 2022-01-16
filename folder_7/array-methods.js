@@ -78,3 +78,13 @@ arr.shift()
 arr.unshift('book')
 console.log(arr);
 // ["book", "hello", "book2", "book3", "book4", "book5", "book6", "book7", "book8"];
+
+// Array.from
+console.log(Array.from('foo'));
+console.log(Array.from([1, 2, 3], x => x + x));
+
+
+// toLowerCase and toUpperCase
+const arr4 = 'KdafkJgksrjg';
+// console.log(arr4.toLowerCase());
+console.log(arr4.toUpperCase());
