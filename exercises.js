@@ -21,7 +21,7 @@ function findIndexMethod(cart, item) {
     const indexValue = cart.findIndex((crt, idx) => {
         return crt.name.toLowerCase() === item.toLowerCase()
     })
-    return indexValue
+    return cart[indexValue]
 }
 
 const result = findIndexMethod(cartItems, "mohammad");
