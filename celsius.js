@@ -75,4 +75,20 @@ function checkVowels(str) {
     }
     return counter;
 }
-console.log('amirali');
+console.log(checkVowels('hello world')); // 3
+
+
+// 
+function changeCase(str) {
+    const arr = str.split(" ");
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        const firstToUpper = arr[i].charAt(0).toUpperCase();
+        const restOf = arr[i].substring(1);
+        result.push(firstToUpper + restOf);
+    }
+
+    return result.join(" ");
+}
+
+console.log(changeCase('hello world')); // Hello World
