@@ -43,48 +43,73 @@ console.log(arr);
 // ["book1", "hello", "book2", "book3", "book4", "book5", "book6", "book7", "book8"];
 
 // slice
-let res4 = arr.slice(2, 7)
+let res4 = arr.slice(2, 7);
 console.log(res4);
 // [ 'book2', 'book3', 'book4', 'book5', 'book6' ]
 
 // sort
-let res5 = arr2.sort()
+let res5 = arr2.sort();
 console.log(res5);
 // [1, 12, 20, 32, 382, 4, 41, 62, 72];
 
 // every
-let res6 = arr2.every(num => num > 5)
+let res6 = arr2.every((num) => num > 5);
 console.log(res6);
 // false
 
 // some
-res6 = arr2.some(num => num > 5)
+res6 = arr2.some((num) => num > 5);
 console.log(res6);
 // true
 
-const arr3 = [1, [32, 34], [[[354, 23]]], [[123]]]
-let res7 = arr3.flat()
+const arr3 = [1, [32, 34], [[[354, 23]]], [[123]]];
+let res7 = arr3.flat();
 console.log(res7);
 // [1, 32, 34, [[354, 23]], [123]];
 
 // concat
-res7 = arr.concat(arr2, arr3)
+res7 = arr.concat(arr2, arr3);
 console.log(res7);
 // ["book1", "hello", "book2", "book3", "book4", "book5", "book6", "book7", "book8", 1, 12, 20, 32, 382, 4, 41, 62, 72, 1, [32, 34], [[[Array]]], [[123]]];
 
-
 // shift and unshif
-arr.shift()
-arr.unshift('book')
+arr.shift();
+arr.unshift("book");
 console.log(arr);
 // ["book", "hello", "book2", "book3", "book4", "book5", "book6", "book7", "book8"];
 
 // Array.from
-console.log(Array.from('foo'));
-console.log(Array.from([1, 2, 3], x => x + x));
-
+console.log(Array.from("foo"));
+console.log(Array.from([1, 2, 3], (x) => x + x));
 
 // toLowerCase and toUpperCase
-const arr4 = 'KdafkJgksrjg';
+const arr4 = "KdafkJgksrjg";
 // console.log(arr4.toLowerCase());
 console.log(arr4.toUpperCase());
+
+// filter
+const productItems = [
+    {
+        title: "book1",
+        extist: true,
+    },
+    {
+        title: "book2",
+        extist: false,
+    },
+    {
+        title: "book3",
+        extist: true,
+    },
+    {
+        title: "book4",
+        extist: false,
+    },
+];
+
+function producNotExist(item) {
+    return item.filter(x => x.extist === true)
+}
+
+let result = producNotExist(productItems)
+console.log(result);
