@@ -62,3 +62,17 @@ function multipleOrNot(n1, n2) {
     return Boolean(isN1 ^ isN2)
 }
 console.log(multipleOrNot(10, 20)); // false
+
+
+// 
+function checkVowels(str) {
+    const vowels = ["a", "e", "i", "o", "u"];
+    let counter = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            counter++;
+        }
+    }
+    return counter;
+}
+console.log('amirali');
