@@ -39,39 +39,35 @@ function B() {
 
 console.log(new A() === new B());
 
-
-
-// 
+//
 const account = {
-    name: 'amirali',
+    name: "amirali",
     outgo: [],
     income: [],
     addOutgo(product, money) {
         this.outgo.push({
             product,
-            money
-        })
+            money,
+        });
     },
     addIncome(product, money) {
         this.income.push({
             product,
-            money
-        })
+            money,
+        });
     },
     getAccountSummary() {
         let totalOutgo = 0;
         let totalIncome = 0;
         let accountBalance = 0;
-        this.outgo.forEach(item => totalOutgo += item.money)
-        this.income.forEach(item => totalIncome += item.money)
+        this.outgo.forEach((item) => (totalOutgo += item.money));
+        this.income.forEach((item) => (totalIncome += item.money));
         accountBalance = totalIncome - totalOutgo;
-        return (
-            `${this.name}, Balance: ${accountBalance}, outgo: ${totalOutgo}, Income: ${totalIncome}`
-        )
-    }
-}
+        return `${this.name}, Balance: ${accountBalance}, outgo: ${totalOutgo}, Income: ${totalIncome}`;
+    },
+};
 
-account.addOutgo('cafe', 39)
-account.addOutgo('book', 59)
-account.addIncome('job', 1000)
+account.addOutgo("cafe", 39);
+account.addOutgo("book", 59);
+account.addIncome("job", 1000);
 console.log(account.getAccountSummary());

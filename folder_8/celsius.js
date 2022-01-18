@@ -49,22 +49,21 @@ console.log(triple(10, 12));
 // multipleOrNot
 function multipleOrNot(n1, n2) {
     if (n1 < 0 || n2 < 0) {
-        return false
+        return false;
     }
 
     function isMultiple(num) {
         return num % 7 === 0 || num % 11 === 0;
     }
 
-    const isN1 = isMultiple(n1)
-    const isN2 = isMultiple(n2)
+    const isN1 = isMultiple(n1);
+    const isN2 = isMultiple(n2);
 
-    return Boolean(isN1 ^ isN2)
+    return Boolean(isN1 ^ isN2);
 }
 console.log(multipleOrNot(10, 20)); // false
 
-
-// 
+//
 function checkVowels(str) {
     const vowels = ["a", "e", "i", "o", "u"];
     let counter = 0;
@@ -75,10 +74,9 @@ function checkVowels(str) {
     }
     return counter;
 }
-console.log(checkVowels('hello world')); // 3
+console.log(checkVowels("hello world")); // 3
 
-
-// 
+//
 function changeCase(str) {
     const arr = str.split(" ");
     const result = [];
@@ -91,4 +89,4 @@ function changeCase(str) {
     return result.join(" ");
 }
 
-console.log(changeCase('hello world')); // Hello World
+console.log(changeCase("hello world")); // Hello World
