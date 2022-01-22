@@ -1,12 +1,12 @@
-const selectBox = document.querySelector(".select-box"),
-    selectBtnX = selectBox.querySelector(".options .playerX"),
-    selectBtnO = selectBox.querySelector(".options .playerO"),
-    playBoard = document.querySelector(".play-board"),
-    players = document.querySelector(".players"),
-    allBox = document.querySelectorAll("section span"),
-    resultBox = document.querySelector(".result-box"),
-    wonText = resultBox.querySelector(".won-text"),
-    replayBtn = resultBox.querySelector("button");
+const selectBox = document.querySelector(".select-box");
+const selectBtnX = selectBox.querySelector(".options .playerX");
+const selectBtnO = selectBox.querySelector(".options .playerO");
+const playBoard = document.querySelector(".play-board");
+const players = document.querySelector(".players");
+const allBox = document.querySelectorAll("section span");
+const resultBox = document.querySelector(".result-box");
+const wonText = resultBox.querySelector(".won-text");
+const replayBtn = resultBox.querySelector("button");
 
 window.onload = () => {
     for (let i = 0; i < allBox.length; i++) {
@@ -82,11 +82,13 @@ function bot() {
 function getIdVal(classname) {
     return document.querySelector(".box" + classname).id;
 }
+
 function checkIdSign(val1, val2, val3, sign) {
     if (getIdVal(val1) == sign && getIdVal(val2) == sign && getIdVal(val3) == sign) {
         return true;
     }
 }
+
 function selectWinner() {
     if (
         checkIdSign(1, 2, 3, playerSign) ||
