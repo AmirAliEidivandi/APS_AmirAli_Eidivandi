@@ -1,11 +1,11 @@
-// forEach and 3 parameter
-// const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+forEach and 3 parameter
+const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// myArr.forEach((item, idx, arr) => {
-//     console.log(item);
-//     console.log(idx);
-//     console.log(arr);
-// });
+myArr.forEach((item, idx, arr) => {
+    console.log(item);
+    console.log(idx);
+    console.log(arr);
+});
 
 // 2.Access the array inside the callback
 // const colors = ['blue', 'green', 'white', 'black']
@@ -53,14 +53,14 @@
 // console.log(allEven); // true
 
 // arrow functions have no this
-// let group = {
-//     title: "our Group",
-//     students: ["amirali", "zahra", "mohammadhossein", "amir"],
-//     showList() {
-//         this.students.forEach((student) => alert(`${this.title} : ${student}`));
-//     },
-// };
-// group.showList();
+let group = {
+    title: "our Group",
+    students: ["amirali", "zahra", "mohammadhossein", "amir"],
+    showList() {
+        this.students.forEach((student) => alert(`${this.title} : ${student}`));
+    },
+};
+group.showList();
 // result our groupt amirali , zahra , .....
 
 // 100 to 1
@@ -79,16 +79,16 @@
 // res => 100, 81, 64, 49, 36, 25, 16, 9, 4, 1
 
 // sum index array
-// const letter = ["a", "b", "a", "d", "c", "a", "b", "d"];
+const letter = ["a", "b", "a", "d", "c", "a", "b", "d"];
 
-// let count = []
+let count = []
 
-// letter.forEach(item => {
-//     if (count[item]) {
-//         count[item]++
-//     } else {
-//         count[item] = 1
-//     }
-// })
-// console.log(count);
+letter.forEach(item => {
+    if (count[item]) {
+        count[item]++
+    } else {
+        count[item] = 1
+    }
+})
+console.log(count);
 // res => [a: 3, b: 2, d: 2, c:1]
