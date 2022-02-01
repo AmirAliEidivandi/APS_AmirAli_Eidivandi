@@ -60,9 +60,9 @@ const winFunction = (letter) => {
 
 // function draw
 const drawFunction = () => {
-    disableButtons()
+    disableButtons();
     msgRef.innerHTML = "&#x1F60E; <br> It's Draw";
-}
+};
 
 // win logic
 const winnChecker = () => {
@@ -97,7 +97,7 @@ btnRef.forEach((element) => {
         // increment count on each click
         count += 1;
         if (count == 9) {
-            drawFunction()
+            drawFunction();
         }
         // check for win on every click
         winnChecker();
