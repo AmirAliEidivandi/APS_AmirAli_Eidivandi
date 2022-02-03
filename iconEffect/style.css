@@ -1,0 +1,107 @@
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .bx {
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.social-btns .btn:before {
+    top: 90%;
+    left: -110%;
+}
+
+.social-btns .btn .bx {
+    transform: scale(0.8);
+}
+
+.social-btns .btn.javascript:before {
+    background-color: #f0db4f;
+}
+
+.social-btns .btn.javascript .bx {
+    color: #f0db4f;
+}
+
+.social-btns .btn.nodejs:before {
+    background-color: #339933;
+}
+
+.social-btns .btn.nodejs .bx {
+    color: #339933;
+}
+
+.social-btns .btn.react:before {
+    background-color: #61dbfb;
+}
+
+.social-btns .btn.react .bx {
+    color: #61dbfb;
+}
+
+.social-btns .btn.html5:before {
+    background-color: #e44d26;
+}
+
+.social-btns .btn.html5 .bx {
+    color: #e44d26;
+}
+
+.social-btns .btn.css3:before {
+    background-color: #264de4;
+}
+
+.social-btns .btn.css3 .bx {
+    color: #264de4;
+}
+
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+    top: -10%;
+    left: -10%;
+}
+
+.social-btns .btn:focus .bx,
+.social-btns .btn:hover .bx {
+    color: #fff;
+    transform: scale(1);
+}
+
+.social-btns {
+    height: 90px;
+    margin: auto;
+    font-size: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.social-btns .btn {
+    display: inline-block;
+    background-color: #fff;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 28%;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+    opacity: 0.99;
+}
+
+.social-btns .btn:before {
+    content: "";
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.social-btns .btn .bx {
+    font-size: 40px;
+    vertical-align: middle;
+}
