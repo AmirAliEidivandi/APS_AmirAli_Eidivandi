@@ -33,6 +33,12 @@ const validate = () => {
         return false;
     }
 
+    if (message.length < 10) {
+        text = 'Please Enter valid message';
+        errorMessage.innerHTML = text;
+        return false;
+    }
+
     alert("form submitted Successfully!");
     return true;
 };
