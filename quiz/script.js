@@ -16,6 +16,7 @@ form.addEventListener("submit", (e) => {
     });
 
     // show result
+    scrollTo(0, 0)
     result.querySelector("span").textContent = `${score}%`;
     result.classList.remove("d-none");
 });
