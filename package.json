@@ -1,0 +1,23 @@
+{
+  "name": "aps_amirali_eidivandi",
+  "version": "1.0.0",
+  "description": "practise js :D",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmirAliEidivandi/APS_AmirAli_Eidivandi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmirAliEidivandi/APS_AmirAli_Eidivandi/issues"
+  },
+  "homepage": "https://github.com/AmirAliEidivandi/APS_AmirAli_Eidivandi#readme",
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}
