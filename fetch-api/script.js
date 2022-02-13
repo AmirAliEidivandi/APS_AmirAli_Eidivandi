@@ -9,9 +9,8 @@
 // console.log(api);
 
 fetch("https://jsonplaceholder.typicode.com/todos")
-    .then((data) => {
-        const api = data.json();
-        console.log(api);
+    .then((response) => {
+        response.json();
     })
     .catch((err) => {
         console.log(err);
