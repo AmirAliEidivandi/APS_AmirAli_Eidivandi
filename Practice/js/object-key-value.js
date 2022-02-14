@@ -26,13 +26,53 @@ let salaries = {
 console.log(sumSalaries(salaries));
 
 // task2 ===============================
-const user = {
-    name: "John",
-    age: 36,
+// const user = {
+//     name: "John",
+//     age: 36,
+// };
+
+// function count(obj) {
+//     return Object.keys(obj).length;
+// }
+
+// console.log(count(user));
+
+// ===============================
+// const user = {
+//     name: "John",
+//     age: 36,
+// }
+
+// for (let [key, value] of Object.entries(user)) {
+//     console.log(`${key}: ${value}`);
+// }
+
+// iterate over with map
+// let user = new Map();
+// user.set("name", "John");
+// user.set("age", 36);
+
+// for (let [key, value] of user) {
+//     console.log(`${key}: ${value}`);
+// }
+
+// ========================================================
+// let guest = "Jane";
+// let admin = "Pete";
+
+// [guest, admin] = [guest, admin];
+
+// console.log(`${guest} ${admin}`);
+
+// destructure
+let options = {
+    title: "Menu",
+    width: 100,
+    height: 200,
 };
 
-function count(obj) {
-    return Object.keys(obj).length;
-}
+const { width: w, height: h, title } = options;
 
-console.log(count(user));
+console.log(title);
+console.log(w);
+console.log(h);
