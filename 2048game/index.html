@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./style.css" />
         <title>2048-Game</title>
     </head>
+
     <body>
         <div id="container">
             <div id="splash" class="screen">
@@ -16,7 +17,7 @@
             <div id="pause" class="screen">
                 <h1>Paused</h1>
                 <button onclick="reset()">reset</button>
-                <button onclick="resume()">resume</button>
+                <button onclick="resume()">continue</button>
             </div>
             <div id="end" class="screen">end</div>
             <div id="game" class="screen">
@@ -24,7 +25,7 @@
                 <div id="info">
                     Score:
                     <span id="score"></span>
-                    <button id="pausebtn" type="button" onclick="pause()">pause</button>
+                    <button type="button" id="pausebtn" onclick="pause()">pause</button>
                 </div>
                 <div id="gamearea">
                     <div class="element"></div>
@@ -53,7 +54,7 @@
             <button onclick="down()">down</button>
             <button onclick="right()">right</button>
         </div>
-        <p>you can also use Arrow keys!</p>
+        <p>You can also use Arrow keys!</p>
         <!-- js -->
         <script src="./script.js"></script>
     </body>
