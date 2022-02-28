@@ -1,18 +1,56 @@
-const newObj = {
-    name: "amirali",
-    family: "eidivandi",
-    get age() {
-        return this.userAge;
-    },
-    set age(uAge) {
-        if (uAge < 20) {
-            throw new Error("this is a access");
+// const newObj = {
+//     name: "amirali",
+//     family: "eidivandi",
+//     get age() {
+//         return this.userAge;
+//     },
+//     set age(uAge) {
+//         if (uAge < 20) {
+//             throw new Error("this is a access");
+//         }
+//         this.userAge = uAge;
+//     },
+// };
+
+// newObj.age = 30;
+
+// console.log(newObj.age);
+// console.log(newObj);
+
+
+function asyncFunc1(callback) {
+    console.log("Started asyncFunc1");
+    setTimeout(() => {
+        console.log("Completed asyncFunc1");
+        callback();
+    }, 3000);
+}
+
+function asyncFunc2(callback) {
+    console.log("Started asyncFunc2");
+    setTimeout(() => {
+        console.log("Completed asyncFunc2");
+        callback();
+    }, 2000);
+}
+
+function asyncFunc3(callback) {
+    console.log("Started asyncFunc3");
+    setTimeout(() => {
+        console.log("Completed asyncFunc3");
+        callback();
+    }, 1000);
+}
+
+function callbackManager(asyncFuncs) {
+    function nextFuncExecutor() {
+        const nextAsyncFunc = asyncFuncs.shift();
+        if (nextAsyncFunc && typeof nextAsyncFunc === "function") {
+            nextAsyncFunc(nextFuncExecutor, asyncFuncs);
         }
-        this.userAge = uAge;
-    },
-};
+    }
+    nextFuncExecutor();
+}
 
-newObj.age = 30;
-
-console.log(newObj.age);
-console.log(newObj);
+// driver code
+callbackManager([asyncFunc1, asyncFunc2, asyncFunc3]);
