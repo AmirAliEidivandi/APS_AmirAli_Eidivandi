@@ -17,7 +17,6 @@
 // console.log(newObj.age);
 // console.log(newObj);
 
-
 // function asyncFunc1(callback) {
 //     console.log("Started asyncFunc1");
 //     setTimeout(() => {
@@ -55,18 +54,39 @@
 // // driver code
 // callbackManager([asyncFunc1, asyncFunc2, asyncFunc3]);
 
+// const obj = {
+//     _marks: 0,
 
-const obj = {
-    _marks: 0,
+//     set marks(value) {
+//         if (value < 0) throw new Error("Marks cant be less than zero");
+//         this._marks = value;
+//     },
 
-    set marks(value) {
-        if (value < 0) throw new Error("Marks cant be less than zero");
-        this._marks = value;
-    },
+//     get marks() {
+//         return this._marks;
+//     },
+// };
 
-    get marks() {
-        return this._marks;
-    },
-};
+// console.log(obj.marks);
 
-console.log(obj.marks);
+function makeIterator(array) {
+    let nextIndex = 0;
+    return {
+        next: function () {
+            return nextIndex < array.length
+                ? {
+                      value: array[nextIndex++],
+                      done: false,
+                  }
+                : {
+                      done: true,
+                  };
+        },
+    };
+}
+
+// driver code
+let it = makeIterator(["yo", "ya"]);
+console.log(it.next().value); // 'yo'
+console.log(it.next().value); // 'ya'
+console.log(it.next().done); // true
