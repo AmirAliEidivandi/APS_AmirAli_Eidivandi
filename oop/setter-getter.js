@@ -17,6 +17,36 @@
 // console.log(newObj.age);
 // console.log(newObj);
 
+// constructor function
+function SecondObj() {
+    let password = "ackjfijhsjkdhf";
+    this.name = "amirali";
+    this.family = "eidivandi";
+
+    this.printer = function () {
+        console.log(password);
+    };
+
+    Object.defineProperties(this, {
+        age: {
+            get: function () {
+                return this.userAge;
+            },
+            set: function (uAge) {
+                if (uAge < 10) {
+                    throw new Error("not found....");
+                }
+                this.userAge = uAge;
+                console.log("this okay");
+            },
+        },
+    });
+}
+
+const user = new SecondObj();
+user.age = 20;
+user.printer()
+
 // function asyncFunc1(callback) {
 //     console.log("Started asyncFunc1");
 //     setTimeout(() => {
@@ -91,29 +121,29 @@
 // console.log(it.next().value); // 'ya'
 // console.log(it.next().done); // true
 
-const obj = {
-    id: 1,
-    username: "Jane",
-    dept: "Computers",
+// const obj = {
+//     id: 1,
+//     username: "Jane",
+//     dept: "Computers",
 
-    displayId() {
-        console.log("Id: " + this.id);
-        return this;
-    },
+//     displayId() {
+//         console.log("Id: " + this.id);
+//         return this;
+//     },
 
-    displayName() {
-        console.log("Name: " + this.username);
-        return this;
-    },
+//     displayName() {
+//         console.log("Name: " + this.username);
+//         return this;
+//     },
 
-    displayDept(dept) {
-        if (typeof dept !== "undefined") {
-            this.dept = dept;
-        }
-        console.log("Dept: " + this.dept);
-        return this;
-    },
-};
+//     displayDept(dept) {
+//         if (typeof dept !== "undefined") {
+//             this.dept = dept;
+//         }
+//         console.log("Dept: " + this.dept);
+//         return this;
+//     },
+// };
 
-// driver code
-obj.displayId().displayName().displayDept("Info Tech");
+// // driver code
+// obj.displayId().displayName().displayDept("Info Tech");
