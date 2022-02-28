@@ -21,17 +21,17 @@ generateJoke();
 // }
 
 // use then
-function generateJoke() {
-    const config = {
-        headers: {
-            Accept: "application/json",
-        },
-    };
+// function generateJoke() {
+//     const config = {
+//         headers: {
+//             Accept: "application/json",
+//         },
+//     };
 
-    fetch("https://icanhazdadjoke.com", config)
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data.joke);
-            jokeEl.innerHTML = data.joke;
-        });
-}
+//     fetch("https://icanhazdadjoke.com", config)
+//         .then((res) => res.json())
+//         .then((data) => {
+//             console.log(data.joke);
+//             jokeEl.innerHTML = data.joke;
+//         });
+// }
