@@ -69,24 +69,51 @@
 
 // console.log(obj.marks);
 
-function makeIterator(array) {
-    let nextIndex = 0;
-    return {
-        next: function () {
-            return nextIndex < array.length
-                ? {
-                      value: array[nextIndex++],
-                      done: false,
-                  }
-                : {
-                      done: true,
-                  };
-        },
-    };
-}
+// function makeIterator(array) {
+//     let nextIndex = 0;
+//     return {
+//         next: function () {
+//             return nextIndex < array.length
+//                 ? {
+//                       value: array[nextIndex++],
+//                       done: false,
+//                   }
+//                 : {
+//                       done: true,
+//                   };
+//         },
+//     };
+// }
+
+// // driver code
+// let it = makeIterator(["yo", "ya"]);
+// console.log(it.next().value); // 'yo'
+// console.log(it.next().value); // 'ya'
+// console.log(it.next().done); // true
+
+const obj = {
+    id: 1,
+    username: "Jane",
+    dept: "Computers",
+
+    displayId() {
+        console.log("Id: " + this.id);
+        return this;
+    },
+
+    displayName() {
+        console.log("Name: " + this.username);
+        return this;
+    },
+
+    displayDept(dept) {
+        if (typeof dept !== "undefined") {
+            this.dept = dept;
+        }
+        console.log("Dept: " + this.dept);
+        return this;
+    },
+};
 
 // driver code
-let it = makeIterator(["yo", "ya"]);
-console.log(it.next().value); // 'yo'
-console.log(it.next().value); // 'ya'
-console.log(it.next().done); // true
+obj.displayId().displayName().displayDept("Info Tech");
