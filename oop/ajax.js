@@ -1,18 +1,21 @@
 const getBtn = document.querySelector(".get-data");
 const postBtn = document.querySelector(".post-data");
 
-const sendHttpRequest = (method, url) => {
+const sendHttpRequest = (method, url, data) => {
     const response = new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.open(method, url);
         xhr.responseType = "json";
+        if (data) {
+            xhr.setRequestHeader("Content-Type", "application/json");
+        }
         xhr.onload = () => {
             resolve(xhr.response);
         };
         xhr.onerror = () => {
             reject("not found...");
         };
-        xhr.send();
+        xhr.send(JSON.stringify(data));
     });
     return response;
 };
@@ -27,7 +30,20 @@ function getData() {
         });
 }
 
-function postData() {}
+function postData() {
+    sendHttpRequest("POST", "https://jsonplaceholder.typicode.com/todos/", {
+        userId: 2,
+        id: 2,
+        title: "Post Title",
+        body: "Post Body",
+    })
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+}
 
 getBtn.addEventListener("click", getData);
 postBtn.addEventListener("click", postData);
