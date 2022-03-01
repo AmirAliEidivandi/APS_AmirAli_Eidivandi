@@ -51,7 +51,11 @@ const postBtn = document.querySelector(".post-data");
 
 // data with fetch api
 const sendHttpRequest = (method, url, data) => {
-    return fetch(url).then((res) => {
+    return fetch(url, {
+        method: method,
+        body: JSON.stringify(data),
+        headers: data ? { "Content-Type": "application/json" } : {},
+    }).then((res) => {
         return res.json();
     });
 };
@@ -60,7 +64,14 @@ function getData() {
         console.log(data);
     });
 }
-function postData() {}
+function postData() {
+    sendHttpRequest("POST", "https://jsonplaceholder.typicode.com/todos/", {
+        userId: 2,
+        id: 2,
+        title: "Post Title",
+        body: "Post Body",
+    }).then((res) => console.log(res));
+}
 
 getBtn.addEventListener("click", getData);
 postBtn.addEventListener("click", postData);
