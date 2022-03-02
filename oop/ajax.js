@@ -1,5 +1,3 @@
-// const { default: axios } = require("axios");
-
 const getBtn = document.querySelector(".get-data");
 const postBtn = document.querySelector(".post-data");
 
@@ -93,7 +91,6 @@ const postBtn = document.querySelector(".post-data");
 //     })
 //     .then((data) => console.log(data));
 
-
 // fetch("https://jsonplaceholder.typicode.com/todos/").then(checkStatus);
 // function checkStatus(res) {
 //     if (res.status >= 200 && res.status < 300) {
@@ -105,25 +102,21 @@ const postBtn = document.querySelector(".post-data");
 //     }
 // }
 
-
 // axios get
-function getData() {
-    axios.get("https://jsonplaceholder.typicode.com/todos/").then((res) => {
-        console.log(res.data);
-    });
-}
+// function getData() {
+//     axios.get("https://jsonplaceholder.typicode.com/todos/").then((res) => {
+//         console.log(res.data);
+//     });
+// }
 
-function postData() {
-    axios.post("https://jsonplaceholder.typicode.com/todos/", {
-        userId: 2,
-        id: 2,
-        title: 'Post Title',
-        body: 'Post Body'
-    })
-        .then(res => {
-            console.log(res.data);
-        })
-}
-
-getBtn.addEventListener("click", getData);
-postBtn.addEventListener("click", postData);
+// function postData() {
+//     axios.post("https://jsonplaceholder.typicode.com/todos/", {
+//         userId: 2,
+//         id: 2,
+//         title: 'Post Title',
+//         body: 'Post Body'
+//     })
+//         .then(res => {
+//             console.log(res.data);
+//         })
+// }
