@@ -1,3 +1,5 @@
+// const { default: axios } = require("axios");
+
 const getBtn = document.querySelector(".get-data");
 const postBtn = document.querySelector(".post-data");
 
@@ -50,27 +52,77 @@ const postBtn = document.querySelector(".post-data");
 // postBtn.addEventListener("click", postData);
 
 // data with fetch api
-const sendHttpRequest = (method, url, data) => {
-    return fetch(url, {
-        method: method,
-        body: JSON.stringify(data),
-        headers: data ? { "Content-Type": "application/json" } : {},
-    }).then((res) => {
-        return res.json();
-    });
-};
+// const sendHttpRequest = (method, url, data) => {
+//     return fetch(url, {
+//         method: method,
+//         body: JSON.stringify(data),
+//         headers: data ? { "Content-Type": "application/json" } : {},
+//     }).then((res) => {
+//         return res.json();
+//     });
+// };
+// function getData() {
+//     sendHttpRequest("GET", "https://jsonplaceholder.typicode.com/todos/").then((data) => {
+//         console.log(data);
+//     });
+// }
+// function postData() {
+//     sendHttpRequest("POST", "https://jsonplaceholder.typicode.com/todos/", {
+//         userId: 2,
+//         id: 2,
+//         title: "Post Title",
+//         body: "Post Body",
+//     }).then((res) => console.log(res));
+// }
+
+// getBtn.addEventListener("click", getData);
+// postBtn.addEventListener("click", postData);
+
+// resoponse
+// fetch("https://jsonplaceholder.typicode.com/todos/")
+//     .then((res) => {
+//         // return res.redirected => false
+//         // return res.text() => data
+//         // return res.json() => data
+//         // return res.status => 200
+//         // return res.statusText; => ok
+//         // return res.ok => true
+//         // return res.url => https://jsonplaceholder.typicode.com/todos/
+//         // return res.type => cors
+//         // return res.headers.get('Content-Type') => application/json; charset=utf-8
+//     })
+//     .then((data) => console.log(data));
+
+
+// fetch("https://jsonplaceholder.typicode.com/todos/").then(checkStatus);
+// function checkStatus(res) {
+//     if (res.status >= 200 && res.status < 300) {
+//         return res;
+//     } else {
+//         let err = new Error(res.statusText);
+//         err.response = res;
+//         throw err;
+//     }
+// }
+
+
+// axios get
 function getData() {
-    sendHttpRequest("GET", "https://jsonplaceholder.typicode.com/todos/").then((data) => {
-        console.log(data);
+    axios.get("https://jsonplaceholder.typicode.com/todos/").then((res) => {
+        console.log(res.data);
     });
 }
+
 function postData() {
-    sendHttpRequest("POST", "https://jsonplaceholder.typicode.com/todos/", {
+    axios.post("https://jsonplaceholder.typicode.com/todos/", {
         userId: 2,
         id: 2,
-        title: "Post Title",
-        body: "Post Body",
-    }).then((res) => console.log(res));
+        title: 'Post Title',
+        body: 'Post Body'
+    })
+        .then(res => {
+            console.log(res.data);
+        })
 }
 
 getBtn.addEventListener("click", getData);
