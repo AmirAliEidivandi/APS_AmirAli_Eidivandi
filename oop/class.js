@@ -159,24 +159,97 @@
 
 // new User().sayHi();
 
-class Animal {
-    constructor(name) {
-        this.speed = 0;
-        this.name = name;
-    }
-}
+// class Animal {
+//     constructor(name) {
+//         this.speed = 0;
+//         this.name = name;
+//     }
+// }
 
-class Rabbit extends Animal {
-    constructor(name, speed, earLength) {
-        super(name);
-        this.earLength = earLength;
-        this.speed = speed;
-    }
+// class Rabbit extends Animal {
+//     constructor(name, speed, earLength) {
+//         super(name);
+//         this.earLength = earLength;
+//         this.speed = speed;
+//     }
 
-    func() {
-        return `speed: ${this.speed} and earLength: ${this.earLength} and name: ${this.name}`;
-    }
-}
+//     func() {
+//         return `speed: ${this.speed} and earLength: ${this.earLength} and name: ${this.name}`;
+//     }
+// }
 
-let rabbit = new Rabbit("dog", 10, 400);
-console.log(rabbit.func());
+// let rabbit = new Rabbit("dog", 10, 400);
+// console.log(rabbit.func());
+
+// class Rectangle {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
+//   // Getter
+//   get area() {
+//     return this.calcArea();
+//   }
+//   // Method
+//   calcArea() {
+//     return this.height * this.width;
+//   }
+// }
+
+// const square = new Rectangle(10, 10);
+
+// console.log(square.area); // 100
+
+// class Polygon {
+//     constructor(...sides) {
+//         this.sides = sides;
+//     }
+
+//     *getSides() {
+//         for (const side of this.sides) {
+//             yield side;
+//         }
+//     }
+// }
+
+// const pentagon = new Polygon(1, 2, 3, 4, 5);
+// console.log([...pentagon.getSides()]);
+// [1, 2, 3, 4, 5]
+
+// class Point {
+//     constructor(x, y) {
+//         this.x = x;
+//         this.y = y;
+//     }
+
+//     static displayName = "Point";
+//     static distance(a, b) {
+//         const dx = a.x - b.x;
+//         const dy = a.y - b.y;
+
+//         return Math.hypot(dx, dy);
+//     }
+// }
+
+// const p1 = new Point(5, 5)
+// const p2 = new Point(10, 10)
+
+// console.log(Point.displayName);
+// console.log(p1.x, p1.y);
+
+// class Animal {
+//     speak() {
+//         return this;
+//     }
+//     static eat() {
+//         return this;
+//     }
+// }
+
+// let obj = new Animal();
+// console.log(obj.speak()); // object
+// let speak = obj.speak;
+// console.log(speak()); // undefined
+// console.log(Animal.eat()); // object
+// let eat = Animal.eat;
+// console.log(eat()); // undefined
