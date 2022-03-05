@@ -103,3 +103,17 @@
 // }
 
 // fullname();
+
+function Animal(name, age, userName) {
+    this.name = name;
+    this.age = age;
+    this.userName = userName;
+}
+
+Animal.prototype.info = function () {
+    const { name, age, userName } = this;
+    return `Name: ${name} - age: ${age} - userName: ${userName}`;
+};
+
+const person = new Animal("amirali", 20, "AmirAli6578");
+console.log(person.info());
