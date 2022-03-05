@@ -1,13 +1,13 @@
-const array = ["A", "B", "C", "D", ["E", "F"]];
-const person = {
-    name: "amirali",
-    age: 25,
-    favoriteFood: "pizza",
-    address: {
-        street: "123 main St",
-        city: "isfahan",
-    },
-};
+// const array = ["A", "B", "C", "D", ["E", "F"]];
+// const person = {
+//     name: "amirali",
+//     age: 25,
+//     favoriteFood: "pizza",
+//     address: {
+//         street: "123 main St",
+//         city: "isfahan",
+//     },
+// };
 
 // const [first, second, third, fourth, [fifth, sixth]] = array
 
@@ -52,14 +52,54 @@ const person = {
 // console.log(firstName);
 // console.log(lastName);
 
+// function addAndMultiply({a, b = 38}) {
+//     const a = options.a;
+//     const b = options.b;
+//     const {a, b} = options
+//     return [a * b, a + b]
+// }
 
-function addAndMultiply({a, b = 38}) {
-    // const a = options.a;
-    // const b = options.b;
-    // const {a, b} = options
-    return [a * b, a + b]
-}
+// const [a, b] = addAndMultiply({a: 2});
+// console.log(a);
+// console.log(b);
 
-const [a, b] = addAndMultiply({a: 2});
-console.log(a);
-console.log(b);
+// spread ...
+// const numArray = [2, 3, 4]
+
+// function sum(multiply, ...numbers) {
+//     console.log(multiply);
+//     console.log(numbers);
+//     return multiply * numbers.reduce((num, sum) => num + sum)
+// }
+
+// sum(...numArray)
+
+// const person2 = { ...person };
+// person.name = 'mohammad'
+// console.log(person2); => amirali
+// console.log(person); => mohammad
+
+// enhanced objects litrails
+// const propertyName = 'job'
+// const firstName = 'amirali';
+// const ageProperty = 1;
+// const age = 20;
+// function sayHi() {
+//     console.log('hello');
+// }
+
+// const person = {
+//     [propertyName]: firstName,
+//     [`age${ageProperty}`]: age,
+//     sayHi,
+// }
+
+// // person[propertyName] = firstName
+
+// console.log(person);
+
+// function fullname(sayHi = "hi", firstName = "amirali", lastName = "eidivnaid", { fullName = "amirali eidivandi" } = {}) {
+//     console.log(`${sayHi} ${firstName} ${lastName}: ${fullName}`);
+// }
+
+// fullname();
