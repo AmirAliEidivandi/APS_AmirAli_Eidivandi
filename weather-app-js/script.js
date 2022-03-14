@@ -1,11 +1,11 @@
-const wrapper = document.querySelector(".wrapper"),
-    inputPart = document.querySelector(".input-part"),
-    infoTxt = inputPart.querySelector(".info-txt"),
-    inputField = inputPart.querySelector("input"),
-    locationBtn = inputPart.querySelector("button"),
-    weatherPart = wrapper.querySelector(".weather-part"),
-    wIcon = weatherPart.querySelector("img"),
-    arrowBack = wrapper.querySelector("header i");
+const wrapper = document.querySelector(".wrapper");
+const inputPart = document.querySelector(".input-part");
+const infoTxt = inputPart.querySelector(".info-txt");
+const inputField = inputPart.querySelector("input");
+const locationBtn = inputPart.querySelector("button");
+const weatherPart = wrapper.querySelector(".weather-part");
+const wIcon = weatherPart.querySelector("img");
+const arrowBack = wrapper.querySelector("header i");
 
 let api;
 
