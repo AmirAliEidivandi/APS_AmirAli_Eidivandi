@@ -35,3 +35,15 @@ generateJoke();
 //             jokeEl.innerHTML = data.joke;
 //         });
 // }
+
+
+function generateJoke() {
+    axios.get("https://icanhazdadjoke.com", {
+        headers: {
+            Accept: 'application/json'
+        },
+    })
+        .then(res => {
+            jokeEl.innerHTML = res.data.joke
+        })
+}
