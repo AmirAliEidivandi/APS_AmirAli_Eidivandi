@@ -30,19 +30,32 @@
 
 // constructor funciton
 
-function Person(fName, lName) {
-    if (!new.target) {
-        throw Error('Cannot be called without the new keyword')
-    }
+// function Person(fName, lName) {
+//     if (!new.target) {
+//         throw Error('Cannot be called without the new keyword')
+//     }
 
+//     this.fName = fName;
+//     this.lName = lName;
+
+//     this.getFullName = function () {
+//         const { fName, lName } = this;
+//         return `firstName: ${fName} - lastName: ${lName}`;
+//     };
+// }
+
+// let person1 = Person("amirali", "eidivandi");
+// console.log(person1.getFullName());
+
+function Person(fName, lName) {
     this.fName = fName;
     this.lName = lName;
-
-    this.getFullName = function () {
-        const { fName, lName } = this;
-        return `firstName: ${fName} - lastName: ${lName}`;
-    };
 }
 
-let person1 = Person("amirali", "eidivandi");
-console.log(person1.getFullName());
+Person.prototype.greet = function () {
+    const { fName, lName } = this;
+    return `fName: ${fName} - lName: ${lName}`;
+};
+
+let person1 = new Person("amirali", "eidivandi");
+console.log(person1.greet());
