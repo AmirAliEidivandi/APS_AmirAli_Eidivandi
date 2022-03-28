@@ -13,15 +13,15 @@ document.querySelector("#push").onclick = function () {
             </div>
         `;
 
-        var current_tasks = document.querySelectorAll(".delete");
-        for (var i = 0; i < current_tasks.length; i++) {
+        let current_tasks = document.querySelectorAll(".delete");
+        for (let i = 0; i < current_tasks.length; i++) {
             current_tasks[i].onclick = function () {
                 this.parentNode.remove();
             };
         }
 
-        var tasks = document.querySelectorAll(".task");
-        for (var i = 0; i < tasks.length; i++) {
+        let tasks = document.querySelectorAll(".task");
+        for (let i = 0; i < tasks.length; i++) {
             tasks[i].onclick = function () {
                 this.classList.toggle("completed");
             };
