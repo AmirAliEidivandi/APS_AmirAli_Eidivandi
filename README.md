@@ -2,5 +2,3 @@
 practise js :D
 
 projects html css js
-
-no copyright
