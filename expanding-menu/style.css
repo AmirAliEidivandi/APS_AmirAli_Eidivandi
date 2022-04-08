@@ -5,8 +5,8 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .menu {
@@ -16,14 +16,15 @@ body {
 }
 
 .toggle {
-    background-color: #30dbf2;
+    background-color: #30bdf2;
     height: 80px;
     width: 80px;
-    color: #fff;
+    color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     transition: 1s;
+    cursor: pointer;
 }
 
 .items {
@@ -31,12 +32,12 @@ body {
     flex-direction: row;
     transform: scaleX(0);
     transform-origin: left;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .items > a {
     display: flex;
-    background-color: #fff;
+    background-color: white;
     height: 80px;
     width: 80px;
     color: #b2b2b2;
@@ -55,5 +56,5 @@ a > .material-icons {
 
 a:hover > .material-icons {
     font-size: 40px;
-    color: #30dbf2;
+    color: #30bdf2;
 }
